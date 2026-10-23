@@ -17,6 +17,8 @@ namespace DevExpressDemo
             InitializeComponent();
         }
 
+        DashboardForm dashboardForm = new DashboardForm();
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -24,7 +26,21 @@ namespace DevExpressDemo
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string username = txtUserName.Text;
+            string password = txtPass.Text;
 
+            if(username== "Shad" && password == "asdasd")
+            {
+                MessageBox.Show("Success");
+                this.Hide();
+                dashboardForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Didn't Work");
+            }
+
+            MessageBox.Show("UserName: "+username+"   Password"+password);
         }
 
         private void labelControl1_Click(object sender, EventArgs e)
@@ -45,6 +61,26 @@ namespace DevExpressDemo
         private void button2_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelControl2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
